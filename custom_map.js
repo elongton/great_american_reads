@@ -76,18 +76,20 @@ for (var j = 0; j < contentArray.length; j++){
       infoArray[i].open(map, markers[i]);
     }
   }
-
-  $( document ).ready(function() {
-    for (k=0; k < locations.length; k++){
-      $('#marker'+String(k+1)).click(createCallback(k));
-    }
-  });
-
 //closes all open dialogs on window click
   google.maps.event.addListener(map, "click", function(event) {
       for (var i = 0; i < infoArray.length; i++ ) {  //I assume you have your infoboxes in some array
            infoArray[i].close();
       }
   });
+
+//jquery to help with clicking
+  $( document ).ready(function() {
+    for (k=0; k < locations.length; k++){
+      $('#marker'+String(k+1)).click(createCallback(k));
+    }
+  });
+
+
 
 }//initMap()
