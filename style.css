@@ -24,8 +24,7 @@ body{
 .location_list_container{
   position: relative;
   z-index: 1;
-  -webkit-box-shadow: 10px 0 5px -2px #888;
-  box-shadow: 10px 0 5px -2px #888;
+  box-shadow: 8px 8px 6px 6px rgba(1, 1, 1, 0.25);
 }
 
 .flag{
@@ -40,17 +39,18 @@ body{
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.5);
+  border-bottom: 10px solid red;
 }
 
 #title{
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Satisfy', cursive;
   font-size: 30px;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .list{
