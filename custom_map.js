@@ -1,57 +1,69 @@
-
-
-
-
-
 function initMap() {
-  var uluru = {lat: 37.54227, lng: -77.443538};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
-    center: uluru
+    center: {lat: 37.5428458, lng: -77.442493}
   });
 
-  var contentString =
-      '<div class="dialog">'+
-        '<div class="dialog_text_div">'+
-          '<h1 class="titleHeading">And Then There Were None</h1>'+
-          '<h1 class="locationHeading">Location: 101 East Franklin Street</h1>'+
-          '<h1 class="dateHeading">Date: 07/04, 12pm-1pm</h1>'+
-          '<h1 class="readerHeading">Reader: Patty Parks</h1>'+
-          '<div>'+
-            '<div style="text-align: justify;">' +
-              '<p style="padding-right: 10px;">Richmond Public Library was founded by civic-minded leaders in the early 1900s.  The establishment of a public library for Richmond residents took several tries.  Originally approached by Mr. Andrew Carnegie in 1901, community leaders and advocates founded the Richmond Public Library Association in 1905 and built support for a locally-funded library.</p>'+
-            '</div>'+
-          '</div>'+
-        '</div>'+ //dialog_text_div
-        '<div class="dialog_image_div">'+
-          '<img src="img/and_then_there_were_none.jpg" style="" alt="book cover">' +
-        '</div>'+ //dialog_image_div
-      '</div>';
+  var contentArray =[
+    description1,
+    description2,
 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
+  ]
+
+
+  var infowindow1 = new google.maps.InfoWindow({
+    content: contentArray[0]
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+    content: contentArray[1]
   });
 
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-    title: 'Uluru (Ayers Rock)'
-  });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
+  var markers = [];
+  var locations = [
+    [{lat: 37.54227, lng: -77.443538}, 'Main Branch', 'A'],
+    [{lat: 37.5543459, lng: -77.4818177}, 'Belmont', 'B']
+  ];
+  function drop() {
+    for (var i = 0; i < locations.length; i++) {
+      addMarkerWithTimeout(locations[i][0], i * 200, locations[i][1], locations[i][2]);
+    }//for
+  }//function drop();
+  drop();
 
 
+
+
+
+
+  function addMarkerWithTimeout(position, timeout, title, label) {
+    window.setTimeout(function() {
+      var newMarker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title: title,
+        label: label,
+        animation: google.maps.Animation.DROP
+      })
+      newMarker.addListener('click', function() {
+        infowindow.open(map, newMarker);
+      });
+      markers.push(newMarker);
+    }, timeout);
+  }
+
+
+/////////////////////////////////////////////////////////////
+//////////////////////LINK LISTENERS/////////////////////////
+/////////////////////////////////////////////////////////////
   $( document ).ready(function() {
-  //LINK LISTENERS
       $('#marker1').click(function() {
-        infowindow.open(map, marker);
+        infowindow1.open(map, markers[0]);
+      });
+      $('#marker2').click(function() {
+        infowindow2.open(map, markers[1]);
       });
 
   });
 
 
-}
-// '<div style="width: 15%; text-align: center;" class="">' +
-//   '<img src="img/book.jpg" style="height: 100px;" alt="book cover">' +
-// '</div>' +
+}//initMap()
