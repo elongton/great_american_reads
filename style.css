@@ -7,6 +7,13 @@ body{
   width: 100vw;
   margin: 0;
 }
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
 
 .dashed{border: 1px dashed black;}
 /*================================*/
@@ -53,6 +60,10 @@ body{
   padding-bottom: 10px;
 }
 
+.date{
+  font-family: 'Lato', sans-serif;
+  margin-right: 10px;
+}
 .list{
   padding: 20px;
 }
@@ -77,12 +88,12 @@ body{
 
 /*=========Dialogs========*/
 .titleHeading{font-family:  'Satisfy', cursive; margin-bottom: 5px; margin-top: 10px;font-size: 30px;}
-.locationHeading, .readerHeading{margin:0;}
+.locationHeading, .readerHeading, .dateHeading{margin:0;}
 
 
 .dialog{
   display: flex;
 }
 .dialog_image_div{align-self: stretch;}
-.dialog_image_div img{height: 200px;}
+.dialog_image_div img{height: 220px;}
 .dialog_text_div{}
