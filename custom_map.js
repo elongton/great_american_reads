@@ -19,6 +19,8 @@ var locations = [
 ];
 
 
+
+
 //////////////////////////////////////////////////////////////////////////
 /////////////////////DO NOT TOUCH ANY OF THE BELOW////////////////////////
 //////////////////////////////////////////////////////////////////////////
@@ -63,13 +65,14 @@ for (var j = 0; j < contentArray.length; j++){
   }
 
 
-  //////////////////////////////////////////////////////////////////////////
-  /////////////////////CREATED MY FIRST CLOSURE!////////////////////////////
-  //////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////
-
+  ///CREATED MY FIRST CLOSURE!//
   function createCallback( i ){
     return function(){
+      //close all other dialogs
+      for (j=0; j<locations.length; j++){
+        infoArray[j].close();
+      }
+      //open clicked dialog
       infoArray[i].open(map, markers[i]);
     }
   }
@@ -80,5 +83,11 @@ for (var j = 0; j < contentArray.length; j++){
     }
   });
 
+//closes all open dialogs on window click
+  google.maps.event.addListener(map, "click", function(event) {
+      for (var i = 0; i < infoArray.length; i++ ) {  //I assume you have your infoboxes in some array
+           infoArray[i].close();
+      }
+  });
 
 }//initMap()
