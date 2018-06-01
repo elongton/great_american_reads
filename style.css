@@ -56,6 +56,7 @@ body{
 .list{
   padding: 20px;
 }
+.list div{margin-bottom: 10px;}
 
 
 /*=========MAP========*/
@@ -74,4 +75,14 @@ body{
   bottom:0;
 }
 
-/*================================*/
+/*=========Dialogs========*/
+.titleHeading{font-family:  'Satisfy', cursive; margin-bottom: 5px; margin-top: 10px;font-size: 30px;}
+.locationHeading, .readerHeading{margin:0;}
+
+
+.dialog{
+  display: flex;
+}
+.dialog_image_div{align-self: stretch;}
+.dialog_image_div img{height: 200px;}
+.dialog_text_div{}
