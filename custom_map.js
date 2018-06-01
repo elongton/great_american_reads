@@ -25,8 +25,6 @@ var locations = [
 //////////////////////////////////////////////////////////////////////////
 
 
-
-
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
@@ -44,6 +42,7 @@ for (var j = 0; j < contentArray.length; j++){
     for (var i = 0; i < locations.length; i++) {
       addMarkerWithTimeout(locations[i][0], i * 200, locations[i][1], locations[i][2], i);
     }//for
+
   }//function drop();
   drop();
 
@@ -64,11 +63,22 @@ for (var j = 0; j < contentArray.length; j++){
   }
 
 
+  //////////////////////////////////////////////////////////////////////////
+  /////////////////////CREATED MY FIRST CLOSURE!////////////////////////////
+  //////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////
+
+  function createCallback( i ){
+    return function(){
+      infoArray[i].open(map, markers[i]);
+    }
+  }
+
   $( document ).ready(function() {
     for (k=0; k < locations.length; k++){
-      $('#marker'+String(k+1)).click(function() {
-        infoArray[k].open(map, markers[k]);
-      });
+      $('#marker'+String(k+1)).click(createCallback(k));
     }
   });
+
+
 }//initMap()
