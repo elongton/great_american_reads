@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////////////////////
 infoArray = []
 var contentArray =[
-  description1,
-  description2,
+  description7_4,
+  description7_5,
 ]
 //////////////////////////////////////////////////////////////////////////
 ////////////////////////MARKER ARRAY DEFINITION///////////////////////////
@@ -14,7 +14,7 @@ var contentArray =[
 
 var markers = [];
 var locations = [
-  [{lat: 37.54227, lng: -77.443538}, 'Main Branch', 'A'],
+  [{lat: 37.54227, lng: -77.443538}, 'Main Branch', '7/4'],
   [{lat: 37.5543459, lng: -77.4818177}, 'Belmont', 'B']
 ];
 
