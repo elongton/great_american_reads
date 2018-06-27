@@ -14,7 +14,7 @@ body{
   text-decoration: none;
 }
 
-
+tr{padding-bottom: 10px;}
 .dashed{border: 1px dashed black;}
 /*================================*/
 
@@ -64,6 +64,10 @@ body{
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+tr td:nth-child(2){
+  font-size: 16px;
 }
 
 .date{
