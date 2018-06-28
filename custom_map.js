@@ -5,6 +5,17 @@
 infoArray = []
 var contentArray =[
   description7_5,  //1
+  description7_7,  //2
+  description7_8,  //3
+  description7_10,  //4
+  description7_14,  //5
+  description7_18,  //6
+  description7_20,  //7
+  description7_21,  //8
+  description7_24,  //9
+  description8_5,  //10
+  description8_17,  //11
+  description9_19,  //12
 ]
 //////////////////////////////////////////////////////////////////////////
 ////////////////////////MARKER ARRAY DEFINITION///////////////////////////
@@ -14,6 +25,17 @@ var contentArray =[
 var markers = [];
 var locations = [
   [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/5'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/7'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/8'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/10'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/14'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/18'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/20'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/21'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/24'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '8/5'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '8/17'],
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '9/19'],
 ];
 
 
@@ -29,7 +51,7 @@ var locations = [
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 10,
     center: {lat: 37.5428458, lng: -77.442493}
   });
 
