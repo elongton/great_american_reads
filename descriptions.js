@@ -19,7 +19,8 @@ var description7_5 =
 var description7_7 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
-        '<h1 class="titleHeading">The Coldest Winter Eve</h1>'+
+        '<h1 class="titleHeading">The Coldest Winter Ever</h1>'+
+        '<h1 class="locationHeading">Location: 1507 Grayland Avenue</h1>'+
         '<h1 class="dateHeading">Date: 07/07, 7:30pm-7:35pm</h1>'+
         '<h1 class="readerHeading">Reader: Sequoia Ross</h1>'+
         '<div>'+
