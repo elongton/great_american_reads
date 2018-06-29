@@ -4,6 +4,7 @@
 //////////////////////////////////////////////////////////////////////////
 infoArray = []
 var contentArray =[
+  description7_4,  //0
   description7_5,  //1
   description7_7,  //2
   description7_8,  //3
@@ -11,6 +12,7 @@ var contentArray =[
   description7_14,  //5
   description7_18,  //6
   description7_20,  //7
+  description7_20_2,  //7_2
   description7_21,  //8
   description7_24,  //9
   description8_5,  //10
@@ -24,20 +26,20 @@ var contentArray =[
 
 var markers = [];
 var locations = [
-  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/5'],
-  [{lat: 37.5440581, lng: -77.4619352}, 'WCVE', '7/7'],
-  [{lat: 37.5581836, lng: -77.4682386}, 'WCVE', '7/8'],
-  [{lat: 37.5440581, lng: -77.4619352}, 'WCVE', '7/10'],
-  [{lat: 37.5362725, lng: -77.4778874}, 'WCVE', '7/14'],
-  [{lat: 37.568638, lng: -77.4715192}, 'WCVE', '7/18'],
-  [{lat: 37.5501729, lng: -77.4779747}, 'WCVE', '7/20'],
-  [{lat: 37.5428458, lng: -77.442493}, 'WCVE', '7/21'],
-  [{lat: 37.5428458, lng: -77.442493}, 'WCVE', '7/24'],
-  [{lat: 37.7350508, lng: -77.1143805}, 'WCVE', '8/5'],
-
-
-  [{lat: 37.5241297, lng: -77.4409174}, 'WCVE', '8/17'],
-  [{lat: 37.4979658, lng: -77.4667912}, 'WCVE', '9/19'],
+  [{lat: 37.5428458, lng: -77.442493}, 'WCVE', '7/24'], //0
+  [{lat: 37.6014322, lng: -77.5491791}, 'WCVE', '7/5'], //1
+  [{lat: 37.5440581, lng: -77.4619352}, 'WCVE', '7/7'], //2
+  [{lat: 37.5581836, lng: -77.4682386}, 'WCVE', '7/8'], //3
+  [{lat: 37.5440581, lng: -77.4619352}, 'WCVE', '7/10'], //4
+  [{lat: 37.5362725, lng: -77.4778874}, 'WCVE', '7/14'], //5
+  [{lat: 37.568638, lng: -77.4715192}, 'WCVE', '7/18'], //6
+  [{lat: 37.5501729, lng: -77.4779747}, 'WCVE', '7/20'], //7
+  [{lat: 37.5501729, lng: -77.4779747}, 'WCVE', '7/20_2'], //7_2
+  [{lat: 37.5428458, lng: -77.442493}, 'WCVE', '7/21'], //8
+  [{lat: 37.5428458, lng: -77.442493}, 'WCVE', '7/24'], //9
+  [{lat: 37.7350508, lng: -77.1143805}, 'WCVE', '8/5'], //10
+  [{lat: 37.5241297, lng: -77.4409174}, 'WCVE', '8/17'], //11
+  [{lat: 37.4979658, lng: -77.4667912}, 'WCVE', '9/19'], //12
 ];
 
 
@@ -110,7 +112,7 @@ for (var j = 0; j < contentArray.length; j++){
 //jquery to help with clicking
   $( document ).ready(function() {
     for (k=0; k < locations.length; k++){
-      $('#marker'+String(k+1)).click(createCallback(k));
+      $('#marker'+String(k)).click(createCallback(k));
     }
   });
 

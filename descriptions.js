@@ -1,10 +1,28 @@
+var description7_4 =
+    '<div class="dialog">'+
+      '<div class="dialog_text_div">'+
+        '<h1 class="titleHeading">The Martian</h1>'+
+        '<h1 class="locationHeading">Location: Main Library</h1>'+
+        '<h1 class="dateHeading">Date: 07/04, 6pm-8pm</h1>'+
+        '<h1 class="readerHeading">Reader: Scott Firestine</h1>'+
+        '<div>'+
+          '<div style="text-align: justify;">' +
+            '<p style="padding-right: 10px;">Great book of survival, futurism, interstellar travel.</p>'+
+            '<p style="padding-right: 10px;">Fun Fact: I love astronauts.</p>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+ //dialog_text_div
+      '<div class="dialog_image_div">'+
+        '<img src="img/the-martian.jpg" style="" alt="book cover">' +
+      '</div>'+ //dialog_image_div
+    '</div>';
 var description7_5 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">Another Country</h1>'+
         '<h1 class="locationHeading">Location: WREJ Studios</h1>'+
         '<h1 class="dateHeading">Date: 07/05, 10:04am-10:15am</h1>'+
-        '<h1 class="readerHeading">Reader: Gary Glowers</h1>'+
+        '<h1 class="readerHeading">Reader: Gary Flowers</h1>'+
         '<div>'+
           '<div style="text-align: justify;">' +
             '<p style="padding-right: 10px;">Developed a Black History bibliography of 42+ titles </p>'+
@@ -20,7 +38,7 @@ var description7_7 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">The Coldest Winter Ever</h1>'+
-        '<h1 class="locationHeading">Location: 1507 Grayland Avenue</h1>'+
+        '<h1 class="locationHeading">Location: TBA Dinner en Blanc (Sold Out)</h1>'+
         '<h1 class="dateHeading">Date: 07/07, 7:30pm-7:35pm</h1>'+
         '<h1 class="readerHeading">Reader: Sequoia Ross</h1>'+
         '<div>'+
@@ -37,8 +55,8 @@ var description7_8 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">The Godfather</h1>'+
-        '<h1 class="locationHeading">Location: 2501 Monument Ave</h1>'+
-        '<h1 class="dateHeading">Date: 07/08, 12:15pm-12:45pm</h1>'+
+        '<h1 class="locationHeading">Location: 2501 Monument Ave, Branch Museum</h1>'+
+        '<h1 class="dateHeading">Date: 07/08, 2pm-2:20pm</h1>'+
         '<h1 class="readerHeading">Reader: Sally Brown</h1>'+
         '<div>'+
           '<div style="text-align: justify;">' +
@@ -55,9 +73,9 @@ var description7_10 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">Things Fall Apart</h1>'+
-        '<h1 class="locationHeading">Location: 1507 Grayland Avenue</h1>'+
+        '<h1 class="locationHeading">Location: 1507 Grayland Avenue, Birdhouse Farmers Market</h1>'+
         '<h1 class="dateHeading">Date: 07/10, 3pm-3:20pm</h1>'+
-        '<h1 class="readerHeading">Reader: Sequoia Ross</h1>'+
+        '<h1 class="readerHeading">Reader: Sequoia Ross / Chef Coaco</h1>'+
         '<div>'+
           '<div style="text-align: justify;">' +
             '<p style="padding-right: 10px;">This book details the consequence and tragedy of lost traditions.</p>'+
@@ -73,7 +91,7 @@ var description7_14 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">Their Eyes Were Watching God</h1>'+
-        '<h1 class="locationHeading">Location: 1700 Hampton Street</h1>'+
+        '<h1 class="locationHeading">Location: Maymont Park</h1>'+
         '<h1 class="dateHeading">Date: 07/14, 10am-10:15am</h1>'+
         '<h1 class="readerHeading">Reader: Stacy Hawkins Adams</h1>'+
         '<div>'+
@@ -91,7 +109,7 @@ var description7_18 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">Charlotte\'s Web</h1>'+
-        '<h1 class="locationHeading">Location: 3201 W. Moore Street</h1>'+
+        '<h1 class="locationHeading">Location: 3201 W. Moore Street, ZZQ Texas Craft Barbecue</h1>'+
         '<h1 class="dateHeading">Date: 07/18, 2pm-2:30pm</h1>'+
         '<h1 class="readerHeading">Reader: Alex Graf</h1>'+
         '<div>'+
@@ -107,14 +125,31 @@ var description7_18 =
 var description7_20 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
-        '<h1 class="titleHeading">The Help</h1>'+
-        '<h1 class="locationHeading">Location: 147 S. Colonial Ave</h1>'+
+        '<h1 class="titleHeading">Confederacy of Dunces</h1>'+
+        '<h1 class="locationHeading">Location: TBA</h1>'+
         '<h1 class="dateHeading">Date: 07/20, 8pm-8:15pm</h1>'+
-        '<h1 class="readerHeading">Reader: Harry Kollatz Jr.</h1>'+
+        '<h1 class="readerHeading">Reader: Harry K.</h1>'+
         '<div>'+
           '<div style="text-align: justify;">' +
             '<p style="padding-right: 10px;">It\'s touted as a "comedy," and it is brilliantly funny, but the backdrop is New Orleans, and there cannot help be a tincture of dark running through the story. Toole doesn\'t shy away from difficult or socially awkward situations. </p>'+
             '<p style="padding-right: 10px;">Fun Fact: My first published novel, "Carlisle Montgomery," will be out on the cusp of summer/autumn, through Primer Books -- a new house in (wait for it)...Sydney, Australia.</p>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+ //dialog_text_div
+      '<div class="dialog_image_div">'+
+        '<img src="img/a-confederacy-of-dunces.jpg" style="" alt="book cover">' +
+      '</div>'+ //dialog_image_div
+    '</div>';
+var description7_20_2 =
+    '<div class="dialog">'+
+      '<div class="dialog_text_div">'+
+        '<h1 class="titleHeading">The Help</h1>'+
+        '<h1 class="locationHeading">Location: TBA</h1>'+
+        '<h1 class="dateHeading">Date: 07/20, 8pm-8:15pm</h1>'+
+        '<h1 class="readerHeading">Reader: Hayat Bain</h1>'+
+        '<div>'+
+          '<div style="text-align: justify;">' +
+          '<p style="padding-right: 10px;">Fun Fact: I lead Dances of Universal Peace!</p>'+
           '</div>'+
         '</div>'+
       '</div>'+ //dialog_text_div
@@ -126,7 +161,7 @@ var description7_21 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">The Color Purple</h1>'+
-        '<h1 class="locationHeading">Location: 101 East Franklin Street</h1>'+
+        '<h1 class="locationHeading">Location: National Council Town Hall @RUMI</h1>'+
         '<h1 class="dateHeading">Date: 07/21, 3pm-3:05pm</h1>'+
         '<h1 class="readerHeading">Reader: Lillie A. Estes</h1>'+
         '<div>'+
@@ -144,7 +179,7 @@ var description7_24 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">To Kill a Mockingbird</h1>'+
-        '<h1 class="locationHeading">Location: 101 East Franklin Street</h1>'+
+        '<h1 class="locationHeading">Location: Main Library, Law Library</h1>'+
         '<h1 class="dateHeading">Date: 07/24, 11am-11:15am</h1>'+
         '<h1 class="readerHeading">Reader: Gail Zwirner</h1>'+
         '<div>'+
@@ -180,7 +215,7 @@ var description8_17 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">The Lord of the Rings (series)</h1>'+
-        '<h1 class="locationHeading">Location: 700 Bainbridge St. RVA 23224</h1>'+
+        '<h1 class="locationHeading">Location: 700 Bainbridge St., Cafe Zata</h1>'+
         '<h1 class="dateHeading">Date: 08/17, 4:05pm-4:25pm</h1>'+
         '<h1 class="readerHeading">Reader: Joanna Lee</h1>'+
         '<div>'+
@@ -198,7 +233,7 @@ var description9_19 =
     '<div class="dialog">'+
       '<div class="dialog_text_div">'+
         '<h1 class="titleHeading">Catch 22</h1>'+
-        '<h1 class="locationHeading">Location: 1201 Broad Rock Rd.</h1>'+
+        '<h1 class="locationHeading">Location: 1201 Broad Rock Rd., Veteran\'s Hospital</h1>'+
         '<h1 class="dateHeading">Date: 09/19, 3pm-4pm</h1>'+
         '<h1 class="readerHeading">Reader: Malcolm Parks</h1>'+
         '<div>'+
