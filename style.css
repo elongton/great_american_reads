@@ -101,6 +101,21 @@ tr td:nth-child(2){
   bottom:0;
 }
 
+
+/*=========RETURN BUTTON========*/
+div.returnbutton{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #5cb85c;
+  color: white;
+  font-family: arial;
+  padding: 15px;
+  border-radius: 7px;
+
+}
+
+
 /*=========Dialogs========*/
 .titleHeading{font-family:  'Satisfy', cursive; margin-bottom: 5px; margin-top: 10px;font-size: 30px;}
 .locationHeading, .readerHeading, .dateHeading{margin:0;}
