@@ -9,13 +9,9 @@ from django.views.generic import (View, TemplateView,
 from .models import Reading
 
 
-
-
 class MapView(TemplateView):
-
     template_name = "index.html"
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['readings'] = Reading.objects.all()
+        context['readings'] = Reading.objects.order_by('date')
         return context
