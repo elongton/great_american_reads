@@ -2,4 +2,15 @@ from django.contrib import admin
 from .models import Reading
 # Register your models here.
 
-admin.site.register(Reading)
+
+
+
+class ReadingAdmin(admin.ModelAdmin):
+    list_display = ('book_title', 'reader_name', 'date', 'start_time', 'end_time')
+
+
+
+
+
+
+admin.site.register(Reading, ReadingAdmin)
