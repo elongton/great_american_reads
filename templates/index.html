@@ -1,0 +1,13 @@
+  {% for o in readings %}
+<ul>
+
+      <li>{{o.date}}</li>
+      <li>{{o.start_time}}</li>
+      <li>{{o.book_title}}</li>
+      <li>{{o.fun_fact}}</li>
+
+</ul>
+
+<img src="{{o.image_url}}" alt="">
+
+{% endfor %}
