@@ -25,7 +25,7 @@ SECRET_KEY = '*rimp+cef-ol2t%*ug3s^aj&o0%k(*ofino-t2st9asoewf#vu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://rpl100days.herokuapp.com']
+ALLOWED_HOSTS = ['rpl100days.herokuapp.com']
 
 
 # Application definition
