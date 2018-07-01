@@ -4,6 +4,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = os.environ.get('SECRET_KEY', 'asdfasdff892374923ufa7k7pi9nl^px504su!&^6tg@!kbfme+=k')
 
 from GAR100days.aws.conf import *
@@ -109,6 +110,7 @@ USE_TZ = True
 
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-root')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR,]
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
