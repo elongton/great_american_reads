@@ -41,7 +41,7 @@ tr td{
 }
 
 .flag{
-  background-image: url('img/100days_map_image_800x800.jpg');
+  background-image: url('/static/img/100days_map_image_800x800.jpg');
   background-position: center top;
   background-size: 100% auto;
   padding-bottom: 100%;
@@ -124,6 +124,6 @@ div.returnbutton{
 .dialog{
   display: flex;
 }
-.dialog_image_div{align-self: stretch;}
+.dialog_image_div{align-self: flex-end; padding-left: 25px;}
 .dialog_image_div img{height: 220px;}
-.dialog_text_div{}
+.dialog_text_div{width: 100%;}

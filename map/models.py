@@ -12,8 +12,8 @@ class Reading(models.Model):
     reason = models.TextField(default='')
     fun_fact = models.TextField(default='')
     image_url = models.URLField()
-    longitude = models.FloatField()
     latitude = models.FloatField()
+    longitude = models.FloatField()
     marker_label = models.CharField(max_length=200)
 
 
