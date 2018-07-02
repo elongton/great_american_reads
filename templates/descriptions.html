@@ -6,20 +6,20 @@
   var description_{{reading.id}} =
       '<div class="dialog">'+
         '<div class="dialog_text_div">'+
-          '<h1 class="titleHeading">{{reading.book_title}}</h1>'+
-          '<h1 class="locationHeading">Location: {{reading.location_name_or_address}}</h1>'+
+          '<h1 class="titleHeading">{{reading.book_title|escapejs}}</h1>'+
+          '<h1 class="locationHeading">Location: {{reading.location_name_or_address|escapejs}}</h1>'+
           '<h1 class="dateHeading">Date: {{reading.date}}</h1>'+
           '<h1 class="dateHeading">Time: {{reading.start_time}}-{{reading.end_time}}</h1>'+
-          '<h1 class="readerHeading">Reader: {{reading.reader_name}}</h1>'+
+          '<h1 class="readerHeading">Reader: {{reading.reader_name|escapejs}}</h1>'+
           '<div>'+
             '<div style="text-align: justify;">' +
-              '<p style="padding-right: 10px;">{{reading.reason}}</p>'+
-              '<p style="padding-right: 10px;">Fun Fact: {{reading.fun_fact}}</p>'+
+              '<p style="padding-right: 10px;">{{reading.reason|escapejs}}</p>'+
+              '<p style="padding-right: 10px;">Fun Fact: {{reading.fun_fact|escapejs}}</p>'+
             '</div>'+
           '</div>'+
         '</div>'+ //dialog_text_div
         '<div class="dialog_image_div">'+
-          '<img src="{{reading.image_url}}" style="" alt="book cover">' +
+          '<img src="{{reading.image_url|escapejs}}" style="" alt="book cover">' +
         '</div>'+ //dialog_image_div
       '</div>';
 {% endfor %}
