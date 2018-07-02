@@ -14,10 +14,7 @@ body{
   text-decoration: none;
 }
 
-tr{padding-bottom: 10px;}
-tr td{
-  max-width: 100px;
-}
+
 .dashed{border: 1px dashed black;}
 /*================================*/
 
@@ -69,20 +66,35 @@ tr td{
   padding-bottom: 10px;
 }
 
-tr td:nth-child(2){
-  font-size: 16px;
-}
+tr{padding-bottom: 10px;}
+table{width: 225px;}
+.date_td{ width: 30px;}
+.title_td{width: 80px;}
 
-.date{
+.marker_connection,
+.marker_connection div table tbody tr td{text-decoration: none;}
+
+.date_td, .title_td, .reader_name{
   font-family: 'Lato', sans-serif;
-  margin-right: 10px;
+  color: #ffdf4f;
 }
 .list{
-  padding: 20px;
   overflow-y: scroll;
-  /* height: 500px; */
 }
-.list div{margin-bottom: 10px;}
+.list div{
+  overflow-x: none;
+}
+
+.list div:hover{
+  background-color: #ffdf4f;
+}
+.list div:hover .date_td,
+.list div:hover .title_td,
+.list div:hover .reader_name{
+  color: #076190!important;}
+
+.even{background-color: #076190;}
+.odd{background-color: #097ab5;}
 
 
 /*=========MAP========*/
@@ -100,6 +112,8 @@ tr td:nth-child(2){
   right:0;
   bottom:0;
 }
+
+
 
 
 /*=========RETURN BUTTON========*/

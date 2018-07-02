@@ -10,21 +10,24 @@
     <div class="flag">
     </div>
     <div class="list">
-      <table>
-        <tbody>
 
-        {% for reading in readings %}
-          <tr>
-            <td><strong class="date">{{reading.date|date:"M d"}}</strong></td>
-            <td><a href="#" id="marker{{forloop.counter0}}"><u>{{reading.book_title}}</u></a></td>
-          </tr>
-          <tr><td>Reader: {{reading.reader_name}}</td></tr>
-          <!--new entry-->
-        {% endfor %}
+      {% for reading in readings %}
+      <a class="marker_connection" href="#" id="marker{{forloop.counter0}}">
+        <div class="{% if forloop.counter0|divisibleby:2 %} even {% else %} odd {% endif %}">
+          <table>
+            <tbody>
 
-        </tbody>
-      </table>
+              <tr class="dashed">
+                <td class="date_td"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
+                <td class="title_td"><strong>{{reading.book_title}}</strong></td>
+              </tr>
+              <tr><td colspan="2" class="reader_name"><i class="far fa-user"></i> {{reading.reader_name}}</td></tr>
 
+            </tbody>
+          </table>
+         </div>
+       </a>
+      {% endfor %}
     </div>
   </aside>
   <!--end location list-->
