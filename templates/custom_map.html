@@ -19,7 +19,7 @@ var contentArray =[
 var markers = [];
 var locations = [
   {% for reading in readings %}
-      [{lat: {{reading.latitude|random_int}}, lng: {{reading.longitude}}}, '{{reading.marker_label}}', '{{reading.date|date:"n/j"}}'], //{{forloop.counter0}}
+      [{lat: {{reading.latitude|random_int}}, lng: {{reading.longitude|random_int}}}, '{{reading.marker_label}}', '{{reading.date|date:"n/j"}}'], //{{forloop.counter0}}
   {% endfor %}
 ];
 
