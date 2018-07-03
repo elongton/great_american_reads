@@ -40,7 +40,7 @@
         '</div>'+
       '</div>'+ //dialog_text_div
       '<div class="dialog_image_div">'+
-        '<a href="{{reading.synopsis_url}}" target="_blank"><img src="{{reading.image_url|escapejs}}" style="" alt="book cover"></a>' +
+        '<a href="{%if reading.synopsis_url %}{{reading.synopsis_url}}{%else%}#{%endif%}" target="_blank"><img src="{{reading.image_url|escapejs}}" style="" alt="book cover"></a>' +
       '</div>'+ //dialog_image_div
     '</div>';
 {% endfor %}

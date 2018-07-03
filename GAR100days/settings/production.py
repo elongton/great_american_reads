@@ -8,7 +8,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = os.environ.get('SECRET_KEY', 'asdfasdff892374923ufa7k7pi9nl^px504su!&^6tg@!kbfme+=k')
 
 from GAR100days.aws.conf import *
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['rpl100days.herokuapp.com']
 
