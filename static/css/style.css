@@ -184,3 +184,8 @@ table.dtable_heading tbody tr td{margin:0; font-family:'Lato', sans-serif; font-
 .dialog_image_div{align-self: flex-start; padding-left: 15px; padding-top: 15px;}
 .dialog_image_div img{height: 220px;}
 .dialog_text_div{width: 100%;}
+
+
+@media(max-width: 500px){
+  .dialog{width: 85vw;}
+}
