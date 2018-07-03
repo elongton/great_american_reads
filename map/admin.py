@@ -6,7 +6,7 @@ from .models import Reading
 
 
 class ReadingAdmin(admin.ModelAdmin):
-    list_display = ('book_title', 'reader_name', 'date', 'start_time', 'end_time')
+    list_display = ('book_title', 'reader_name', 'date', 'start_time', 'end_time', 'activated')
 
 
 

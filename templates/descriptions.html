@@ -4,23 +4,44 @@
 
 {% for reading in readings %}
   var description_{{reading.id}} =
-      '<div class="dialog">'+
-        '<div class="dialog_text_div">'+
-          '<h1 class="titleHeading">{{reading.book_title|escapejs}}</h1>'+
-          '<h1 class="locationHeading">Location: {{reading.location_name_or_address|escapejs}}</h1>'+
-          '<h1 class="dateHeading">Date: {{reading.date}}</h1>'+
-          '<h1 class="dateHeading">Time: {{reading.start_time}}-{{reading.end_time}}</h1>'+
-          '<h1 class="readerHeading">Reader: {{reading.reader_name|escapejs}}</h1>'+
-          '<div>'+
-            '<div style="text-align: justify;">' +
-              '<p style="padding-right: 10px;">{{reading.reason|escapejs}}</p>'+
-              '<p style="padding-right: 10px;">Fun Fact: {{reading.fun_fact|escapejs}}</p>'+
-            '</div>'+
+    '<div class="dialog">'+
+      '<div class="dialog_text_div">'+
+        '<h1 class="titleHeading">{{reading.book_title|escapejs}}</h1>'+
+        '<h2 class="authorHeading">By: {{reading.author|escapejs}}</h2>'+
+
+        '<table class="dtable_heading">' +
+            '<tbody>' +
+            '<tr>' +
+              '<td class="dtable_firstcol">Reader:</td>' +
+              '<td>{{reading.reader_name|escapejs}}</td>' +
+            '</tr>' +
+            '<tr>' +
+              '<td class="dtable_firstcol">Date:</td>' +
+              '<td>{{reading.date}}</td>' +
+            '</tr>' +
+            '<tr>' +
+              '<td class="dtable_firstcol">Time:</td>' +
+              '<td>{{reading.start_time}}-{{reading.end_time}}</td>' +
+            '</tr>' +
+            '<tr>' +
+              '<td class="dtable_firstcol">Location:</td>' +
+              '<td>{{reading.location_name_or_address|escapejs}}</td>' +
+            '</tr>' +
+
+          '</tbody>' +
+        '</table>' +
+        '<div>'+
+          '<div style="text-align: justify;">' +
+          '<h4 style="margin: 5px 0;">Why did you choose this book?</h4>'+
+            '<p style="padding-right: 10px; margin-top: 0;">{{reading.reason|escapejs}}</p>'+
+          '<h4 style="margin: 5px 0;">Fun Fact</h4>'+
+            '<p style="padding-right: 10px; margin-top: 0;">{{reading.fun_fact|escapejs}}</p>'+
           '</div>'+
-        '</div>'+ //dialog_text_div
-        '<div class="dialog_image_div">'+
-          '<img src="{{reading.image_url|escapejs}}" style="" alt="book cover">' +
-        '</div>'+ //dialog_image_div
-      '</div>';
+        '</div>'+
+      '</div>'+ //dialog_text_div
+      '<div class="dialog_image_div">'+
+        '<a href="{{reading.synopsis_url}}" target="_blank"><img src="{{reading.image_url|escapejs}}" style="" alt="book cover"></a>' +
+      '</div>'+ //dialog_image_div
+    '</div>';
 {% endfor %}
 </script>

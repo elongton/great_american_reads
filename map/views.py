@@ -13,5 +13,5 @@ class MapView(TemplateView):
     template_name = "index.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['readings'] = Reading.objects.order_by('date')
+        context['readings'] = Reading.objects.exclude(activated__exact=False).order_by('date')
         return context

@@ -70,6 +70,8 @@ tr{padding-bottom: 10px;}
 table{width: 225px;}
 .date_td{ width: 30px;}
 .title_td{width: 80px;}
+.reader_name{font-size: 12px;}
+
 
 .marker_connection,
 .marker_connection div table tbody tr td{text-decoration: none;}
@@ -132,12 +134,17 @@ div.returnbutton{
 
 /*=========Dialogs========*/
 .titleHeading{font-family:  'Satisfy', cursive; margin-bottom: 5px; margin-top: 10px;font-size: 30px;}
-.locationHeading, .readerHeading, .dateHeading{margin:0;}
+.authorHeading{padding:0; margin-bottom:0; margin-top:-10px; }
+
+
+table.dtable_heading tbody tr td{margin:0; font-family:'Lato', sans-serif; font-size: 15px;}
+.dtable_firstcol{width: 75px;}
+
 
 
 .dialog{
   display: flex;
 }
-.dialog_image_div{align-self: flex-end; padding-left: 25px;}
+.dialog_image_div{align-self: flex-start; padding-left: 15px; padding-top: 15px;}
 .dialog_image_div img{height: 220px;}
 .dialog_text_div{width: 100%;}

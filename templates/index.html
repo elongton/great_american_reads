@@ -12,21 +12,21 @@
     <div class="list">
 
       {% for reading in readings %}
-      <a class="marker_connection" href="#" id="marker{{forloop.counter0}}">
-        <div class="{% if forloop.counter0|divisibleby:2 %} even {% else %} odd {% endif %}">
-          <table>
-            <tbody>
+        <a class="marker_connection" href="#" id="marker{{forloop.counter0}}">
+          <div class="{% if forloop.counter0|divisibleby:2 %} even {% else %} odd {% endif %}">
+            <table>
+              <tbody>
 
-              <tr class="dashed">
-                <td class="date_td"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
-                <td class="title_td">{{reading.book_title}}</td>
-              </tr>
-              <!-- <tr><td colspan="2" class="reader_name"><i class="far fa-user"></i> {{reading.reader_name}}</td></tr> -->
+                <tr class="dashed">
+                  <td class="date_td"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
+                  <td class="title_td">{{reading.book_title}}<br><span class="reader_name"><i class="fas fa-microphone"></i>&nbsp;{{reading.reader_name}}</span></td>
+                </tr>
+                <!-- <tr><td colspan="2" class="reader_name"><i class="far fa-user"></i> {{reading.reader_name}}</td></tr> -->
 
-            </tbody>
-          </table>
-         </div>
-       </a>
+              </tbody>
+            </table>
+           </div>
+         </a>
       {% endfor %}
     </div>
   </aside>
