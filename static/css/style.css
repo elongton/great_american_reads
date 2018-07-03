@@ -115,10 +115,9 @@ table{width: 225px;}
 .list div:hover .date_td,
 .list div:hover .title_td,
 .list div:hover .reader_name{
-  color: #076190!important;}
+  color: #076190;}
 
 @media(max-width: 500px){
-  .list{height: 175px;}
 }
 
 
@@ -143,7 +142,7 @@ table{width: 225px;}
 }
 
 @media(max-width: 500px){
-  .map_container{height: 50vh;}
+  .map_container{display:none;}
 }
 
 
