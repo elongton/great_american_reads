@@ -97,6 +97,7 @@ table{width: 225px;}
 @media(max-width: 500px){
   table{width: 100%;}
   .title_td{width: auto;}
+  .date_td{white-space: nowrap; padding-right: 15px; padding-left: 5px;}
 }
 
 .marker_connection,
