@@ -94,6 +94,10 @@ table{width: 225px;}
 .title_td{width: 80px;}
 .reader_name{font-size: 12px;}
 
+@media(max-width: 500px){
+  table{width: 100%;}
+  .title_td{width: auto;}
+}
 
 .marker_connection,
 .marker_connection div table tbody tr td{text-decoration: none;}
