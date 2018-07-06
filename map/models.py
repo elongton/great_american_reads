@@ -14,6 +14,7 @@ class Reading(models.Model):
     fun_fact = models.TextField(default='')
     image_url = models.URLField()
     synopsis_url = models.URLField(default='', null=True, blank=True)
+    video_url = models.URLField(default='', null=True, blank=True)
     latitude = models.FloatField()
     longitude = models.FloatField()
     marker_label = models.CharField(max_length=200)

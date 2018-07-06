@@ -103,7 +103,16 @@ table{width: 225px;}
 .marker_connection,
 .marker_connection div table tbody tr td{text-decoration: none;}
 
-.date_td, .title_td, .reader_name{
+
+.video_a{
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 3px;
+  }
+
+.date_td, .title_td, .video_a, .reader_name{
   font-family: 'Lato', sans-serif;
   color: #ffdf4f;
 }
@@ -119,8 +128,15 @@ table{width: 225px;}
 }
 .list div:hover .date_td,
 .list div:hover .title_td,
+.list div:hover .video_a,
 .list div:hover .reader_name{
   color: #076190;}
+
+.list div:hover .video_a:hover{
+  background-color: #076190;
+  color: #ffdf4f;
+}
+
 
 @media(max-width: 500px){
 }
