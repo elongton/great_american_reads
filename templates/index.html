@@ -9,8 +9,7 @@
   <aside class="location_list_container">
     <div class="flag">
     </div>
-    <div class="list">
-
+    <div class="desktop_list">
       {% for reading in readings %}
         <div style="position: relative;" class="{% if forloop.counter0|divisibleby:2 %} even {% else %} odd {% endif %}">
           <a class="marker_connection" href="#" id="marker{{forloop.counter0}}">
@@ -30,7 +29,19 @@
          </div>
 
       {% endfor %}
+    </div><!--desktop_list-->
+    <div class="mobile_list">
+
+
+
+
+
     </div>
+
+
+
+
+
   </aside>
   <!--end location list-->
 
