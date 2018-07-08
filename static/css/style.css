@@ -12,6 +12,7 @@ body{margin: 0;}
 @media(max-width: 600px){
   .mapbody{
     overflow-y: scroll;
+    height: auto;
   }
 }
 .isDisabled {
@@ -157,6 +158,9 @@ table{width: 225px;}
 /* START MOBILE */
 @media(min-width: 600px){
   .mobile_list{display:none;}
+}
+.mobile_list{
+
 }
 .mobile_body{padding: 0 10px;}
 .return_to_list_mobile{
