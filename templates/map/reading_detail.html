@@ -1,0 +1,53 @@
+{% extends "detail_base.html" %}
+{% load static %}
+
+
+{% block content %}
+   <h1 class="titleHeading">{{reading.book_title}}</h1>
+   <h4 class="authorHeading">By: {{reading.author}}</h2>
+   {% if reading.video_url %}
+   <a class="" href="{{reading.video_url}}"><button style="margin-top: 5px;" class="btn btn-primary">Watch the Video <i class="fas fa-film"></i></button></a>
+   {% endif %}
+   <div class="" style="margin-top:10px;">
+     <img style="width: 100%; max-width: 500px;" src="{{reading.image_url}}" style="" alt="book cover"></a>
+   </div>
+
+    <div class="synopsisdiv" style="margin: 10px 0;">
+      <a href="https://www.google.com/maps/search/?api=1&query={{reading.latitude}},{{reading.longitude}}"><button class="btn btn-success">View Location</button></a>
+     {% if reading.synopsis_url %}
+      <a href="{%if reading.synopsis_url %}{{reading.synopsis_url}}{%else%}#{%endif%}" target="_blank"><button class="btn btn-primary">Read Synopsis</button></a>
+     {% endif %}
+    </div>
+
+   <table class="dtable_heading" style="width: 100%;">
+       <tbody>
+       <tr>
+         <td class="dtable_firstcol">Reader:</td>
+         <td>{{reading.reader_name}}</td>
+       </tr>
+       <tr>
+         <td class="dtable_firstcol">Date:</td>
+         <td>{{reading.date}}</td>
+       </tr>
+       <tr>
+         <td class="dtable_firstcol">Time:</td>
+         <td>{{reading.start_time}}-{{reading.end_time}}</td>
+       </tr>
+       <tr>
+         <td class="dtable_firstcol">Location:</td>
+         <td>{{reading.location_name_or_address}}</td>
+       </tr>
+
+     </tbody>
+   </table>
+   <div>
+     <div style="text-align: justify;">
+     <h4 style="margin: 5px 0;">Why did you choose this book?</h4>
+       <p style="padding-right: 10px; margin-top: 0;">{{reading.reason}}</p>
+     <h4 style="margin: 5px 0;">Fun Fact</h4>
+       <p style="padding-right: 10px; margin-top: 0;">{{reading.fun_fact}}</p>
+     </div>
+   </div>
+
+
+{% endblock %}

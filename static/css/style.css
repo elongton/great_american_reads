@@ -1,11 +1,15 @@
 html{
-  overflow-x: hidden;
-  overflow-y: hidden;
+
 }
-body{
+
+body{margin: 0;}
+
+.mapbody{
   height: 100vh;
   width: 100vw;
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .isDisabled {
   color: currentColor;
@@ -25,7 +29,7 @@ body{
   height: 100%;
 }
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   .project_container{
     display: inline;
   }
@@ -43,7 +47,7 @@ body{
   /* height: 100vh; */
 }
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   .location_list_container{
     width: 100%;
     display: inline;
@@ -59,7 +63,7 @@ body{
   padding-bottom: 100%;
 }
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   .flag{
     background-image: url('/static/img/100days_map_image_mobile.png');
     padding-bottom: 50%;
@@ -94,14 +98,14 @@ table{width: 225px;}
 .title_td{width: 80px;}
 .reader_name{font-size: 12px;}
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   table{width: 100%;}
   .title_td{width: auto;}
-  .date_td{white-space: nowrap; padding-right: 15px; padding-left: 5px;}
+  .date_td{white-space: nowrap; padding-right: 15px;}
 }
 
 .marker_connection,
-.marker_connection div table tbody tr td{text-decoration: none;}
+.marker_connection div table tbody tr td{text-decoration: none!important;}
 
 
 .video_a{
@@ -116,30 +120,77 @@ table{width: 225px;}
   font-family: 'Lato', sans-serif;
   color: #ffdf4f;
 }
-.list{
-  overflow-y: scroll;
-}
-.list div{
-  overflow-x: none;
-}
 
-.list div:hover{
-  background-color: #ffdf4f;
-}
-.list div:hover .date_td,
-.list div:hover .title_td,
-.list div:hover .video_a,
-.list div:hover .reader_name{
-  color: #076190;}
 
-.list div:hover .video_a:hover{
+/* START DESKTOP LIST */
+  .desktop_list{
+    overflow-y: scroll;
+  }
+  .desktop_list div{
+    overflow-x: none;
+  }
+
+  .desktop_list div:hover{
+    background-color: #ffdf4f;
+  }
+  .desktop_list div:hover .date_td,
+  .desktop_list div:hover .title_td,
+  .desktop_list div:hover .video_a,
+  .desktop_list div:hover .reader_name{
+    color: #076190;}
+
+  .desktop_list div:hover .video_a:hover{
+    background-color: #076190;
+    color: #ffdf4f;
+  }
+
+  @media(max-width: 600px){
+    .desktop_list{display:none;}
+  }
+/* END DESKTOP LIST */
+
+
+/* START MOBILE LIST */
+  @media(min-width: 600px){
+    .mobile_list{display:none;}
+  }
+/* END MOBILE LIST */
+
+
+
+
+/* START MOBILE DETAIL VIEW */
+
+.mobile_body{padding: 0 10px;}
+.return_to_list_mobile{
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
   background-color: #076190;
-  color: #ffdf4f;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
+/*END MOBILE DETAIL VIEW*/
 
-@media(max-width: 500px){
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .even{background-color: #076190;}
@@ -162,7 +213,7 @@ table{width: 225px;}
   bottom:0;
 }
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   .map_container{display:none;}
 }
 
@@ -181,7 +232,7 @@ div.returnbutton{
 }
 
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   div.returnbutton{
     display:none;
   }
@@ -190,7 +241,7 @@ div.returnbutton{
 
 /*=========Dialogs========*/
 .titleHeading{font-family:  'Satisfy', cursive; margin-bottom: 5px; margin-top: 10px;font-size: 30px;}
-.authorHeading{padding:0; margin-bottom:0; margin-top:-10px; }
+.authorHeading{padding:0; margin-bottom:0; margin-top: 0px;}
 
 
 table.dtable_heading tbody tr td{margin:0; font-family:'Lato', sans-serif; font-size: 15px;}
@@ -206,6 +257,6 @@ table.dtable_heading tbody tr td{margin:0; font-family:'Lato', sans-serif; font-
 .dialog_text_div{width: 100%;}
 
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   .dialog{width: 85vw;}
 }

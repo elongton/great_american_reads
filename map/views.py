@@ -15,3 +15,9 @@ class MapView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['readings'] = Reading.objects.exclude(activated__exact=False).order_by('date')
         return context
+
+
+
+
+class ReadingDetailView(DetailView):
+    model = Reading

@@ -15,8 +15,8 @@
           <a class="marker_connection" href="#" id="marker{{forloop.counter0}}">
             <table>
               <tbody>
-                <tr class="dashed">
-                  <td class="date_td"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
+                <tr class="">
+                  <td class="date_td" style="padding-left: 5px;"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
                   <td class="title_td">{{reading.book_title}}<br><span class="reader_name"><i class="fas fa-microphone"></i>&nbsp;{{reading.reader_name}}</span></td>
                 </tr>
                 <!-- <tr><td colspan="2" class="reader_name"><i class="far fa-user"></i> {{reading.reader_name}}</td></tr> -->
@@ -31,12 +31,25 @@
       {% endfor %}
     </div><!--desktop_list-->
     <div class="mobile_list">
-
-
-
-
-
-    </div>
+      {% for reading in readings %}
+        <div style="position: relative;" class="{% if forloop.counter0|divisibleby:2 %} even {% else %} odd {% endif %}">
+          <a class="marker_connection" href="/{{reading.pk}}">
+            <table>
+              <tbody>
+                <tr class="">
+                  <td class="date_td" style="padding-left: 5px;"><strong class="date">{{reading.date|date:"M d"}}</strong></td>
+                  <td class="title_td">{{reading.book_title}}<br><span class="reader_name"><i class="fas fa-microphone"></i>&nbsp;{{reading.reader_name}}</span></td>
+                </tr>
+                <!-- <tr><td colspan="2" class="reader_name"><i class="far fa-user"></i> {{reading.reader_name}}</td></tr> -->
+              </tbody>
+            </table>
+           </a>
+           {% if reading.video_url %}
+           <a class="video_a" target="_blank" href="{{reading.video_url}}"><i class="fas fa-film"></i></a>
+           {% endif %}
+         </div>
+      {% endfor %}
+    </div><!--mobile_list-->
 
 
 
