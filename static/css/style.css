@@ -1,7 +1,5 @@
 html{
-
 }
-
 body{margin: 0;}
 
 .mapbody{
@@ -10,6 +8,11 @@ body{margin: 0;}
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+@media(max-width: 600px){
+  .mapbody{
+    overflow-y: scroll;
+  }
 }
 .isDisabled {
   color: currentColor;
@@ -150,17 +153,11 @@ table{width: 225px;}
 /* END DESKTOP LIST */
 
 
-/* START MOBILE LIST */
-  @media(min-width: 600px){
-    .mobile_list{display:none;}
-  }
-/* END MOBILE LIST */
 
-
-
-
-/* START MOBILE DETAIL VIEW */
-
+/* START MOBILE */
+@media(min-width: 600px){
+  .mobile_list{display:none;}
+}
 .mobile_body{padding: 0 10px;}
 .return_to_list_mobile{
   position: fixed;
