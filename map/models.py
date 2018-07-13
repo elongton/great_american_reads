@@ -19,6 +19,8 @@ class Reading(models.Model):
     longitude = models.FloatField()
     marker_label = models.CharField(max_length=200)
     activated = models.BooleanField(default=True)
+    email_address = models.TextField(default='', null=True, blank=True)
+    phone_number = models.TextField(default='', null=True, blank=True)
 
 
     def __str__(self):
